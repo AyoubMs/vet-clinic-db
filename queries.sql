@@ -19,3 +19,7 @@ WHERE NAME IN ('Agumon', 'Pikachu');
 SELECT escape_attempts
 FROM animals
 WHERE weight_kg > 10.5;
+
+SELECT *
+FROM animals
+WHERE neutered = TRUE;
