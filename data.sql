@@ -1,12 +1,4 @@
 /* Populate database with sample data. */
-INSERT INTO animals (NAME)
-VALUES ('Luna');
-
-INSERT INTO animals (NAME)
-VALUES ('Daisy');
-
-INSERT INTO animals (NAME)
-VALUES ('Charlie');
 
 INSERT INTO
   animals (
@@ -27,3 +19,13 @@ INSERT INTO
     weight_kg
   )
 VALUES ('Gabumon', 'November 15, 2018', 2, TRUE, 8);
+
+INSERT INTO
+  animals (
+    NAME,
+    date_of_birth,
+    escape_attempts,
+    neutered,
+    weight_kg
+  )
+VALUES ('Pikachu', 'January 7, 2021', 1, FALSE, 15.04);
