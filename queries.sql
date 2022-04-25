@@ -15,3 +15,7 @@ WHERE neutered = TRUE ANDescape_attempts < 3;
 SELECT date_of_birth
 FROM animals
 WHERE NAME IN ('Agumon', 'Pikachu');
+
+SELECT escape_attempts
+FROM animals
+WHERE weight_kg > 10.5;
