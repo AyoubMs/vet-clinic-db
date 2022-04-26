@@ -43,6 +43,12 @@ WHERE species IS NULL;
 COMMIT;
 
 
+BEGIN;
+DELETE
+FROM animals;
+ROLLBACK;
+
+
 
 
 
