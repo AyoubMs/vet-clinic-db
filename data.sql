@@ -90,3 +90,14 @@ INSERT INTO
     weight_kg
   )
 VALUES ('Boarmon', 'June 7, 2005', 7, TRUE, 20.4);
+
+
+INSERT INTO
+  animals (
+    NAME,
+    date_of_birth,
+    escape_attempts,
+    neutered,
+    weight_kg
+  )
+VALUES ('Blossom', 'October 13, 1998', 3, TRUE, 17);
