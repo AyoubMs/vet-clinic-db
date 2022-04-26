@@ -32,6 +32,12 @@ SELECT *
 FROM animals
 WHERE weight_kg BETWEEN 10.4 AND 17.3;  
 
+BEGIN;
+UPDATE animals
+SET species = 'unspecified';
+SELECT * FROM animals;
+ROLLBACK;
+SELECT * FROM animals;
 
 BEGIN;
 UPDATE animals
@@ -41,13 +47,14 @@ UPDATE animals
 SET species = 'pokemon'
 WHERE species IS NULL;
 COMMIT;
+SELECT * FROM animals;
 
-
-BEGIN;
+BEGIN
 DELETE
 FROM animals;
 ROLLBACK;
-
+-- this will show that the table exists
+\d animals
 
 BEGIN;
 DELETE
@@ -55,13 +62,16 @@ FROM animals
 WHERE date_of_birth > 'January 1, 2022';
 SAVEPOINT younger_deleted;
 UPDATE animals
-SET weight_kg = - (weight_kg);
+SET weight_kg = weight_kg * (-1);
 ROLLBACK TO younger_deleted;
+UPDATE animals
+SET weight_kg = weight_kg * (-1)
+WHERE weight_kg < 0;
 COMMIT;
 
 SELECT count(*) FROM animals;
 SELECT count(*) FROM animals
-WHERE escape_attempts > 0;
+WHERE escape_attempts = 0;
 SELECT AVG(weight_kg) AS average_weight FROM animals;
 SELECT * FROM animals
 ORDER BY escape_attempts DESC
