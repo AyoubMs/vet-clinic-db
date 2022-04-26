@@ -1,5 +1,4 @@
 /* Populate database with sample data. */
-
 INSERT INTO
   animals (
     NAME,
@@ -80,7 +79,6 @@ INSERT INTO
   )
 VALUES ('Angemon', 'June 12, 2005', 1, TRUE, 45);
 
-
 INSERT INTO
   animals (
     NAME,
@@ -91,14 +89,13 @@ INSERT INTO
   )
 VALUES ('Boarmon', 'June 7, 2005', 7, TRUE, 20.4);
 
-
 INSERT INTO
   animals (
     NAME,
     date_of_birth,
     escape_attempts,
     neutered,
-    weight_kg
+    t t weight_kg
   )
 VALUES ('Blossom', 'October 13, 1998', 3, TRUE, 17);
 
