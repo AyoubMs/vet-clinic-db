@@ -49,3 +49,13 @@ INSERT INTO
     weight_kg
   )
 VALUES ('Charmander', 'February 8, 2020', 0, TRUE, -11);
+
+INSERT INTO
+  animals (
+    NAME,
+    date_of_birth,
+    escape_attempts,
+    neutered,
+    weight_kg
+  )
+VALUES ('Plantmon', 'November 15, 2021', 2, TRUE, -5.7);
