@@ -59,4 +59,15 @@ SET weight_kg = - (weight_kg);
 ROLLBACK TO younger_deleted;
 COMMIT;
 
-
+SELECT count(*) FROM animals;
+SELECT count(*) FROM animals
+WHERE escape_attempts > 0;
+SELECT AVG(weight_kg) AS average_weight FROM animals;
+SELECT * FROM animals
+ORDER BY escape_attempts DESC
+LIMIT 1;
+SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals
+GROUP BY species;
+SELECT species, AVG(escape_attempts) FROM animals
+WHERE date_of_birth BETWEEN 'January 1, 1990' AND 'December 31, 2000'
+GROUP BY species;
