@@ -78,4 +78,4 @@ INSERT INTO
     neutered,
     weight_kg
   )
-VALUES ('Angemon', 'June 12, 2005', 1, TRUE, -12.13);
+VALUES ('Angemon', 'June 12, 2005', 1, TRUE, 45);
