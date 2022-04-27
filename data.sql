@@ -172,3 +172,23 @@ CASE
     ELSE (SELECT id FROM species WHERE name = 'Pokemon')
 END;
 SELECT * FROM animals;
+COMMIT;
+
+
+BEGIN;
+UPDATE animals
+SET owner_id =
+CASE
+    WHEN name = 'Agumon' THEN (SELECT id FROM owners WHERE full_name = 'Sam Smith')
+    WHEN name = 'Gabumon' THEN (SELECT id FROM owners WHERE full_name = 'Jennifer Orwell')
+    WHEN name = 'Pikachu' THEN (SELECT id FROM owners WHERE full_name = 'Jennifer Orwell')
+    WHEN name = 'Devimon' THEN (SELECT id FROM owners WHERE full_name = 'Bob')
+    WHEN name = 'Plantmon' THEN (SELECT id FROM owners WHERE full_name = 'Bob')
+    WHEN name = 'Charmander' THEN (SELECT id FROM owners WHERE full_name = 'Melody Pond')
+    WHEN name = 'Squirtle' THEN (SELECT id FROM owners WHERE full_name = 'Melody Pond')
+    WHEN name = 'Blossom' THEN (SELECT id FROM owners WHERE full_name = 'Melody Pond')
+    WHEN name = 'Angemon' THEN (SELECT id FROM owners WHERE full_name = 'Dean Winchester')
+    WHEN name = 'Boarmon' THEN (SELECT id FROM owners WHERE full_name = 'Dean Winchester')
+END;
+SELECT * FROM animals;
+COMMIT;
