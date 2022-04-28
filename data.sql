@@ -247,8 +247,7 @@ VALUES ('Stephanie Mendez', 64, 'May 4, 1981');
 INSERT INTO vets (NAME, age, date_of_graduation)
 VALUES ('Jack Harkness', 38, 'April 8, 2008');
 
-INSERT INTO
-  specializations (species_id, vets_id)
+INSERT INTO specializations (species_id, vets_id)
 VALUES ( (
       SELECT id
       FROM species
@@ -260,8 +259,7 @@ VALUES ( (
     )
   );
 
-  INSERT INTO
-  specializations (species_id, vets_id)
+INSERT INTO specializations (species_id, vets_id)
 VALUES ( (
       SELECT id
       FROM species
@@ -273,8 +271,7 @@ VALUES ( (
     )
   );
 
-    INSERT INTO
-  specializations (species_id, vets_id)
+INSERT INTO specializations (species_id, vets_id)
 VALUES ( (
       SELECT id
       FROM species
@@ -286,8 +283,7 @@ VALUES ( (
     )
   );
 
-  INSERT INTO
-  specializations (species_id, vets_id)
+INSERT INTO specializations (species_id, vets_id)
 VALUES ( (
       SELECT id
       FROM species
@@ -298,3 +294,5 @@ VALUES ( (
       WHERE NAME = 'Jack Harkness'
     )
   );
+
+
