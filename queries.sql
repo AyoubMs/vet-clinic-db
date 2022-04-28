@@ -153,14 +153,8 @@ LIMIT 1;
 
 -- Details for most recent visit: animal information, vet information, and date of visit.
 SELECT 
-    animals.name,
-    animals.date_of_birth,
-    animals.escape_attempts,
-    animals.neutered,
-    animals.weight_kg,
-    vets.name,
-    vets.age,
-    vets.date_of_graduation 
+    animals.*,
+    vets.*
 FROM animals
 INNER JOIN visits ON animals.id = visits.animals_id
 INNER JOIN vets ON vets.id = visits.vets_id
