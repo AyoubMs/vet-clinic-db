@@ -10,6 +10,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - [data.sql](./data.sql) to populate tables with sample data.
 - [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database.
 
+## Database Diagram
+
+[Link to interactive diagram](https://drawsql.app/student-548/diagrams/vet-clinic/embed)
+
+![Screenshot of the diagram](./vet_clinic_diagram.png)
+
 ## About me
 
 👤 **Soufiane Boursen**
